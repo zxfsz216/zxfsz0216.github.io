@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Switch Button #3 - CodePen</title>
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+    <style>
+    .text-effect{
+    color: #fff;
+    font-family: 'Frijole', cursive;
+    font-size: 80px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 8px;
+    margin: 30px auto 0;
+    animation: 4s animate infinite linear;
+}
+@keyframes animate{
+    0%{ text-shadow: 0 0 0 white; }
+    40%{
+        color: rgba(255,255,255,0);
+        text-shadow: 0 0 30px white;
+    }
+    70%{
+        color: rgba(255,255,255,0.4);
+        text-shadow: 0 0 10px white;
+    }
+    90%{
+        color: rgba(255,255,255,0.6);
+        text-shadow: 0 0 30px white;
+    }
+    100%{ text-shadow: 0 0 40px rgba(255,255,255,0); }
+}
+@media only screen and (max-width: 990px){
+    .text-effect{ font-size: 80px; }
+}
+@media only screen and (max-width: 767px){
+    .text-effect{ font-size: 40px; }
+}
+@media only screen and (max-width: 479px){
+    .text-effect{ font-size: 30px; }
+}
+@media only screen and (max-width: 359px){
+    .text-effect{ font-size: 25px; }
+}       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-effect">
+                    <span>呦呵</span>
+                </div>
+            </div>
+        </div>
+    </div>
+  <label class="button"><input type="checkbox"><span id="btn"></span ><span></span></input></label>
+  <script>
+
+       var btn = document.getElementById('btn');
+       var timer ;
+         btn.onclick=function (){
+          timer= setTimeout(fn,3000);
+      
+       }
+       function fn(){
+          location.href="index01.html";
+          clearInterval(timer)
+       }
+
+
+     
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+.xuanzhuan{
+    width: 200px;
+    height: 400px;
+    border: 1px solid red;
+    margin: 100px;
+    perspective:30000px;
+}
+.xuanzhuan .zhuan{
+    width: 200px;
+    height: 400px;
+    position: relative;
+    /* perspective:3000px; */
+    transform-style:preserve-3d;
+    transition:all 6s ease 0s;
+}
+.xuanzhuan .zhuan .chang{
+    width: 200px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:1px solid red;
+}
+.xuanzhuan .zhuan .duan{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:1px solid red;
+}
+
+.xuanzhuan .zhuan div:nth-child(1){transform:translateZ(100px); background:url(../images/upload/pic_1.jpg);background-size:cover;}
+.xuanzhuan .zhuan div:nth-child(2){transform:translateZ(-100px);background:url(../images/upload/pic_1.jpg);background-size:cover; }
+.xuanzhuan .zhuan div:nth-child(3){transform: rotateY(90deg) translateZ(-100px);background:url(../images/upload/pic_1.jpg);background-size:cover;}
+.xuanzhuan .zhuan div:nth-child(4){transform: rotateY(90deg) translateZ(100px);background:url(../images/upload/pic_1.jpg);background-size:cover;}
+.xuanzhuan .zhuan div:nth-child(5){transform: rotateX(90deg) translateZ(100px);background:url(../images/upload/pic_1.jpg);background-size:cover; }
+.xuanzhuan .zhuan div:nth-child(6){transform: rotateX(90deg) translateZ(-300px);background:url(../images/upload/pic_1.jpg);background-size:cover; }
+.xuanzhuan:hover .zhuan{
+     transform:rotateY(-360deg)  rotateX(-360deg) ;
+}
